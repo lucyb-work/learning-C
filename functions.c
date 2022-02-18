@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 
+// function prototyes so the compiler doesnt scream
+void printMyFavoriteAnimal(void);
+void incrementAge(int);
+
 int main(int argc, char const *argv[])
 {
     // some spicy number functions
@@ -25,9 +29,20 @@ int main(int argc, char const *argv[])
     } */
     printMyFavoriteAnimal();
 
+
+    //body for the incrimentAge function
+    int age = 100;
+    incrementAge(&age);
+    printf("%d", age)
+
     return 0;
 }
 
 void printMyFavoriteAnimal(void) {
   printf("My favorite animal is a cat\n");
+}
+
+// using pointers in functions :D
+void incrementAge(int* agePointer) {
+  *agePointer+= 1;
 }
